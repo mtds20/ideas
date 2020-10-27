@@ -1,0 +1,53 @@
+/* Mateus David de Souza
+   This program will show the smallest number of $20, $10, $5, $ 1 bills needed to pay an amount entered by the user.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+
+ int amount;
+ printf("Enter a dollar amount: \n");
+ scanf("%d", &amount);
+
+ int nOfTwentyBills;
+ int totalValueOfTwentyBills;
+ int nOfTenBills;
+ int totalValueOfTenBills;
+ int nOfFiveBills;
+ int totalValueOfFiveBills;
+ int nOfOneBills;
+ int totalValueOfOneBills;
+ int updatedAmount;
+ int updatedAmount2;
+ int updatedAmount3;
+ int updatedAmount4;
+
+ nOfTwentyBills = amount / 20;
+ totalValueOfTwentyBills = nOfTwentyBills * 20;
+ updatedAmount = amount - totalValueOfTwentyBills;
+
+ nOfTenBills = updatedAmount / 10;
+ totalValueOfTenBills = nOfTenBills * 10;
+ updatedAmount2 = updatedAmount - totalValueOfTenBills;
+
+
+ nOfFiveBills = updatedAmount2 / 5;
+ totalValueOfFiveBills = nOfFiveBills * 5;
+ updatedAmount3 = updatedAmount2 - totalValueOfFiveBills;
+
+
+ nOfOneBills = updatedAmount3 / 1;
+ totalValueOfOneBills = nOfOneBills * 1;
+ updatedAmount4 = updatedAmount3 - totalValueOfOneBills;
+
+ printf("\n");
+ printf("$20 bills: %d\n", nOfTwentyBills);
+ printf("$10 bills: %d\n", nOfTenBills);
+ printf("$5 bills: %d\n", nOfFiveBills);
+ printf("$1 bills: %d\n", nOfOneBills);
+
+ return 0;
+
+}
